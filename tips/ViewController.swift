@@ -15,7 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let index = defaults.integerForKey("tips_index")
+        
+        tipPercentagesControl.selectedSegmentIndex = index
         totalLabel.text = "$0.00"
         tipLabel.text = "$0.00"
     }

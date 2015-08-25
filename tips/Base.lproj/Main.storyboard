@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Default Tips View Controller-->
         <scene sceneID="Wt6-8g-QId">
             <objects>
-                <viewController id="VfP-X7-2NI" sceneMemberID="viewController">
+                <viewController id="VfP-X7-2NI" customClass="DefaultTipsViewController" customModule="tips" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I7W-B2-3Ml" customClass="DefaultTipController" customModule="tips">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,10 +33,16 @@
                                 <rect key="frame" x="142" y="157" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="onEnter:" destination="VfP-X7-2NI" eventType="touchDown" id="X9u-to-n1B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="defaultTipsPercentagesControl" destination="SpI-6C-n64" id="r4G-Jx-abt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saX-Zf-dAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
